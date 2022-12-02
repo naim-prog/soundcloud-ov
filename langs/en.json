@@ -1,0 +1,5 @@
+{
+    "total_reproduction_time": "This year you have reproduce {} minutes of music",
+    "most_reproduced_song": "Your favourite song of this year is '{}' that you have reproduced {} times",
+    "favourite_artist": "Your most reproduced artist is {}"
+}
