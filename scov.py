@@ -27,24 +27,40 @@ def try_oauth_and_cli_id(o_auth, cli_id):
         print(f"Trying to reach soundcloud you got a {req.status_code} status code")
         exit(1)
 
+def template_output_json():
+    return {
+        "artists": [ 
+            {
+                "artist_id": 0,
+                "artist_name": "artist_name",
+                "time_reproduce": 0
+            }
+        ],
+        "tracks": [ 
+            {
+                "track_id": 0,
+                "number_of_repros": 0,
+                "track_name": "track_name",
+                "artist_name": "artist_name"
+            }
+        ],
+        "total_reproduction_time": 0,
+        "number_of_genres": 0,
+        "most_played_genre": "genre"
+    }
+
 def make_scov(o_auth, cliend_id, lang_file):
     # Timestamp time in seconds
     actual_time_seconds = int(datetime.datetime.now().timestamp())
-    # When a tracks was reproduced more than 1 year stop recording data
-    stop_time_seconds   = actual_time_seconds - 31622400
+    # When a tracks was reproduced more than 1 year (- 1 day) stop recording data
+    stop_time_seconds   = actual_time_seconds - 31536000
 
     # Variables to dump on output
     total_reproduction_time = 0 # seconds
 
-    if not os.path.isfile('template-output.json'):
-        print("Couldn't found template output JSON")
-        exit(1)
+    ov_output_file = template_output_json()
 
-    with open('template-output.json', 'r') as f:
-        ov_output_file = json.load(f)
-
-    
-
+    pass
 
 if __name__ == "__main__":
 
