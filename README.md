@@ -4,6 +4,8 @@ Soundcloud OV is a resume of your year listening music for Soundcloud (Spotify W
 
 I doesn't even care about this things like Spotify Wrapped because I hate data collection from big tech companies, but I wanted to make this because people seems to care about how much music they listen and also as a mini project to train myself
 
+I realise that Soundcloud history doesnt track repeated tracks, so if you reproduce a track 2 times only keep track of the last time you listen to this track. So this doesnt work as expected, but at least if was fun :)
+
 # Usage
 
 To install the necesaries python packages run this on terminal
